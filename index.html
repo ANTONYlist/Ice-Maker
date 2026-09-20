@@ -20,7 +20,7 @@
 :root{--red:#bd2a1d;--cream:#f7f5ee;--ink:#111;--line:#ddd9cf;--radius:10px;--page:1180px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;background:var(--cream);-webkit-font-smoothing:antialiased}a{color:inherit}img{display:block;max-width:100%}
 .announcement{background:var(--red);color:#fff;text-align:center;font-size:18px;font-weight:800;letter-spacing:.025em;padding:13px 16px;line-height:1.25}
-.site-header{height:102px;background:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid rgba(0,0,0,.08)}.header-left,.header-right{width:48px;display:flex;align-items:center;justify-content:center}.search-ico{width:29px;height:29px;border:2px solid #111;border-radius:50%;position:relative}.search-ico:after{content:"";position:absolute;width:14px;height:2px;background:#111;right:-10px;bottom:-5px;transform:rotate(48deg);transform-origin:left}.bag-ico{width:29px;height:32px;border:2px solid #111;position:relative}.bag-ico:before{content:"";position:absolute;width:12px;height:9px;border:2px solid #111;border-bottom:0;border-radius:8px 8px 0 0;left:6px;top:-9px}.brand{display:flex;align-items:center;justify-content:center}.brand-logo{display:block;width:min(285px,42vw);height:auto;max-height:68px;object-fit:contain}
+.site-header{height:102px;background:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid rgba(0,0,0,.08)}.header-left,.header-right{width:48px;display:flex;align-items:center;justify-content:center}.search-ico{width:29px;height:29px;border:2px solid #111;border-radius:50%;position:relative}.search-ico:after{content:"";position:absolute;width:14px;height:2px;background:#111;right:-10px;bottom:-5px;transform:rotate(48deg);transform-origin:left}.bag-ico{width:29px;height:32px;border:2px solid #111;position:relative}.bag-ico:before{content:"";position:absolute;width:12px;height:9px;border:2px solid #111;border-bottom:0;border-radius:8px 8px 0 0;left:6px;top:-9px}.brand{display:flex;align-items:center;justify-content:center}.brand-name{font-size:30px;line-height:1;font-weight:700;letter-spacing:.02em;color:#111;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:min(520px,62vw)}
 .shell{max-width:var(--page);margin:auto;padding:36px 24px}.product{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:56px;align-items:start}.gallery{min-width:0}.slider{position:relative;overflow:hidden;background:#eee}.track{display:flex;gap:0;transition:transform .32s ease;will-change:transform}.slide{flex:0 0 100%;min-width:0}.slide img{width:100%;height:min(70vh,690px);object-fit:contain;background:#eee}.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.thumb{padding:0;border:1px solid transparent;background:#f7f7f7;border-radius:2px;overflow:hidden;cursor:pointer}.thumb.active{border-color:#111}.thumb img{width:100%;aspect-ratio:1/1;object-fit:cover}.dots{display:none}.mobile-arrows{display:none}
 .info{position:sticky;top:18px}.title{font-size:36px;line-height:1.08;margin:0 0 14px;font-weight:800}.price{font-size:30px;font-weight:800;color:var(--red);margin:0 0 22px}.stock{font-size:16px;margin:18px 0;font-weight:800}.stock:before{content:"";display:inline-block;width:14px;height:14px;border-radius:50%;background:#78d36a;box-shadow:0 0 0 4px #d9f1d5;margin-right:10px;vertical-align:-1px}.refund{display:flex;align-items:flex-start;gap:10px;font-size:17px;line-height:1.35;margin:20px 0;font-weight:700}.check{width:22px;height:22px;border:2px solid #111;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 22px;margin-top:1px}.cart-post-form{margin:0;padding:0}.cart-post-form button.cta{font-family:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}.sticky-cart-form{flex:0 0 auto}.sticky-cart-form .cta{width:auto;min-width:170px;margin:0;padding:0 22px}
 .cta{display:flex;width:100%;align-items:center;justify-content:center;min-height:60px;background:var(--red);color:#fff;border:0;border-radius:10px;font-size:19px;font-weight:900;text-transform:uppercase;text-decoration:none;letter-spacing:.02em;margin:28px 0}.divider{height:1px;background:var(--line);margin:18px 0}.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:14px 0}.benefit{text-align:center;font-size:14px;font-weight:700}.benefit .ico{display:flex;align-items:center;justify-content:center;margin:0 auto 8px;width:36px;height:36px}.benefit .ico img{width:30px;height:30px;object-fit:contain}.desc{font-size:17px;line-height:1.55;margin:28px 0}.desc p{margin:0 0 12px}
@@ -36,7 +36,7 @@
   .search-ico:after{width:9px;height:1.5px;right:-6px;bottom:-4px}
   .bag-ico{width:17px;height:21px;border-width:1.5px}
   .bag-ico:before{width:8px;height:6px;border-width:1.5px;border-bottom:0;left:3px;top:-6px}
-  .brand-logo{width:160px;max-width:58vw;max-height:30px}
+  .brand-name{font-size:20px;max-width:68vw}
   .info{padding:20px 14px 0}
   .title{font-size:23px;line-height:1.08;font-weight:700;letter-spacing:0;margin-bottom:11px}
   .price{font-size:22px;line-height:1.05;font-weight:700;margin-bottom:20px}
@@ -63,7 +63,7 @@
 @media(max-width:900px){
   .site-header{padding-left:14px}
   .brand{justify-content:flex-start;margin-right:auto}
-  .brand-logo{margin-left:0}
+  .brand-name{margin-left:0}
   .desc,.desc p{font-weight:500}
 }
 
@@ -71,7 +71,7 @@
 @media(max-width:900px){
   .site-header{height:52px;padding:0 14px 0 8px;justify-content:space-between}
   .brand{margin:0 auto 0 0;justify-content:flex-start;flex:0 1 auto}
-  .brand-logo{width:190px;max-width:62vw;max-height:34px;margin:0;object-position:left center}
+  .brand-name{font-size:20px;max-width:68vw;margin:0;text-align:left}
   .header-right{width:28px;margin-left:auto}
   .desc,.desc p{font-weight:700}
 }
@@ -179,7 +179,7 @@
 </head>
 <body>
 <div class="announcement">clearing everything out before the movers come</div>
-<header class="site-header"><div class="brand"><img class="brand-logo" src="https://pub-76d7f8efb5424db898b507791a7d57fe.r2.dev/home-space-list-logo%20(1).png" alt="Home Space List"></div><div class="header-right"><span class="bag-ico" aria-hidden="true"></span></div></header>
+<header class="site-header"><div class="brand"><span class="brand-name" data-store-name aria-label="Store name"></span></div><div class="header-right"><span class="bag-ico" aria-hidden="true"></span></div></header>
 <main class="shell">
 <section class="product">
   <div class="gallery" id="gallery">
@@ -252,6 +252,29 @@ const sticky=document.getElementById('sticky'),cta=document.getElementById('main
   document.querySelectorAll('.reserve-trigger').forEach(function(btn){
     btn.addEventListener('click', reserve);
   });
+})();
+</script>
+
+<script>
+/* Shopify store name: read-only lookup through the configured Worker. */
+const STORE_INFO_WORKER_URL = "https://antony-zbj.changreary87.workers.dev";
+(async function loadShopifyStoreName(){
+  const targets = document.querySelectorAll("[data-store-name]");
+  if (!targets.length || !STORE_INFO_WORKER_URL.startsWith("https://")) return;
+  const cacheKey = "shopify_store_name::" + STORE_INFO_WORKER_URL;
+  const apply = name => targets.forEach(el => { el.textContent = name || ""; });
+  const cached = sessionStorage.getItem(cacheKey);
+  if (cached) apply(cached);
+  try {
+    const response = await fetch(STORE_INFO_WORKER_URL.replace(/\/$/, "") + "/store-info", { method: "GET", cache: "no-store" });
+    const data = await response.json();
+    if (response.ok && data.ok && data.storeName) {
+      sessionStorage.setItem(cacheKey, data.storeName);
+      apply(data.storeName);
+    }
+  } catch (error) {
+    console.warn("Store name lookup failed:", error);
+  }
 })();
 </script>
 </body></html>
