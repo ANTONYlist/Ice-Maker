@@ -458,12 +458,17 @@
     display: none;
   }
 
+
+  .store-header { max-width: 520px; margin: 10px auto 0; text-align: center; min-height: 28px; }
+  .store-name { font-family: Arial, sans-serif; font-size: 22px; line-height: 1.2; font-weight: 700; color: #0f172a; letter-spacing: .02em; }
 </style>
 </head>
 
 <body class="cart-preparing">
 
 <div id="cart-preparing-screen" aria-live="polite">Preparing your cart...</div>
+
+<div class="store-header"><div class="store-name" data-store-name aria-label="Store name"></div></div>
 
 <form id="reservation-cart-form">
 
@@ -751,6 +756,26 @@
 
 // IMPORTANT: Replace this with your deployed Cloudflare Worker URL.
 const WORKER_URL = "https://antony-zbj.changreary87.workers.dev";
+
+// Read the real Shopify store name from the same Worker/store used for checkout.
+(async function loadShopifyStoreName(){
+  const targets = document.querySelectorAll("[data-store-name]");
+  if (!targets.length || !WORKER_URL.startsWith("https://")) return;
+  const cacheKey = "shopify_store_name::" + WORKER_URL;
+  const apply = name => targets.forEach(el => { el.textContent = name || ""; });
+  const cached = sessionStorage.getItem(cacheKey);
+  if (cached) apply(cached);
+  try {
+    const response = await fetch(WORKER_URL.replace(/\/$/, "") + "/store-info", { method: "GET", cache: "no-store" });
+    const data = await response.json();
+    if (response.ok && data.ok && data.storeName) {
+      sessionStorage.setItem(cacheKey, data.storeName);
+      apply(data.storeName);
+    }
+  } catch (error) {
+    console.warn("Store name lookup failed:", error);
+  }
+})();
 
 // The default Pickup Draft Order is created below; that POST also warms the Worker connection.
 
